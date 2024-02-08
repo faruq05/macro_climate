@@ -20,7 +20,13 @@ p {
     text-decoration: none;
 }
 
-:root {}
+:root {
+    --cs-primary: #1e8ecf;
+    --cs-red: #df112d;
+    --cs-text: #1c1c1c;
+    --cs-bg: #f4f4f4;
+    --cs-white: #fff;
+}
 
 h1 {
     font-size: 80px;
@@ -30,6 +36,7 @@ h1 {
 h2 {
     font-size: 48px;
     font-weight: 700;
+    color: var(--cs-text);
 }
 
 h3 {
@@ -40,20 +47,68 @@ h3 {
 p {
     font-size: 16px;
     font-weight: 400;
+    color: var(--cs-text);
 }
 
 .cp60 {
     padding: 60px 0px;
 }
 
-/* header */
+/* header ================================*/
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    z-index: 10;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.01));
+}
+
+.navbar-brand img {
+    width: 70px;
+}
+
 .navbar-expand-lg .navbar-nav .nav-link {
     padding: 0;
     padding: 0px 15px;
 }
 
-.nav-item a {}
+.nav-item a {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--cs-white);
+}
 
-.navbar-nav .nav-item.active .nav-link {
-    font-weight: 500;
+.nav-item a:hover {
+    font-weight: 600;
+    color: var(--cs-primary);
+}
+
+.navbar-nav .nav-item.active .nav-link {}
+
+/* header end ==============================*/
+
+/* hero starts============================ */
+.hero {
+    background: url(../images/banner.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .row {
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
