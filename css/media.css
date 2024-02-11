@@ -67,7 +67,7 @@
 
     .service_box {
         padding: 15px;
-        height: auto;
+        min-height: auto;
     }
 
     .prod_box img {
