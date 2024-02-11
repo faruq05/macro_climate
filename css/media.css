@@ -1,3 +1,9 @@
+@media(max-width:1024px) {
+    .service_box {
+        min-height: 380px;
+    }
+}
+
 @media(max-width:991px) {
 
     h1 {
